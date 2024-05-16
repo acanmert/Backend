@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Suggestions.DataAccess\Suggestions.DataAccess.csproj" />
+    <ProjectReference Include="..\Suggestions.Entities\Suggestions.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
