@@ -19,42 +19,56 @@ namespace Suggestions.Business.Concrete
             _manager = manager;
         }
 
-        public void CreateUser(User user)
+        public bool CheckUser(string Email, string password)
+        {
+            var user = GetUser(Email);
+            if (user == null)
+            {
+                return false;
+            }
+            if (user.Password == password)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool CreateUser(User user)
         {
 
-           if(!_manager.User.DoesEmailExist(user.Email))
+            if (!_manager.User.DoesEmailExist(user.Email))
             {
                 _manager.User.Create(user);
                 _manager.Save();
+                return true;
             }
-        
-
-
+            return false;
         }
-    
+
 
         public void DeleteUser(User user)
         {
-            if (_manager.User.GetUser(user.Email) is not null)
+            if (!_manager.User.DoesEmailExist(user.Email))
             {
                 _manager.User.Delete(user);
             }
-           
+
         }
 
         public List<User> GetAllUser()
         {
-            return _manager.User.GetAlUsers().ToList();
+            return _manager.User.GetAlUsers();
         }
 
         public User? GetUser(string Email)
         {
-            return _manager.User.GetUser(Email);
+            var Liste = _manager.User.GetAlUsers();
+            return Liste.FirstOrDefault(u => u.Email == Email);
         }
 
         public void UpdateUser(User user)
         {
-            if (_manager.User.GetUser(user.Email) is not null)
+            if (!_manager.User.DoesEmailExist(user.Email))
             {
                 _manager.User.Update(user);
             }

@@ -22,7 +22,7 @@ namespace Suggestions.DataAccess.EfCore
 
         public void DeleteUser(User user) => Delete(user);
 
-        public IQueryable<User> GetAlUsers() => FindAll();
+        public List<User> GetAlUsers() => FindAll().ToList();
 
         public User? GetUser(string Email)
         {

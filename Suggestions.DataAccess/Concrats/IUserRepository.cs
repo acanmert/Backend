@@ -15,7 +15,7 @@ namespace Suggestions.DataAccess.Concrats
         void UpdateUser(User user);
         void CreateUser(User user);
 
-        IQueryable<User> GetAlUsers();
+        List<User> GetAlUsers();
 
 
     }

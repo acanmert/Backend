@@ -11,8 +11,9 @@ namespace Suggestions.Business.Abstract
     {
         List<User> GetAllUser();
         User? GetUser(string Email);
-        void CreateUser(User user);
+        bool CreateUser(User user);
         void UpdateUser(User user);
         void DeleteUser(User user);
+        bool CheckUser(string Email,string password);
     }
 }
