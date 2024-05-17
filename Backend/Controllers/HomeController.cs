@@ -19,14 +19,9 @@ namespace Backend.Controllers
 
         public IActionResult Index()
         {
-           // kayit();
             return View();
         }
-        public void kayit()
-        {
-            User user = new User {Name="as",Email="asa11",Password="12",SurName="as",PasswordConfirmed="as" };
-            _userService.CreateUser(user);
-        }
+
         public IActionResult Privacy()
         {
             return View();

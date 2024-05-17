@@ -15,5 +15,6 @@ namespace Suggestions.Business.Abstract
         void UpdateUser(User user);
         void DeleteUser(User user);
         bool CheckUser(string Email,string password);
+        void EmailConfirmation();
     }
 }

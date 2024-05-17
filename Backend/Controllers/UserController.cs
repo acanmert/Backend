@@ -35,7 +35,6 @@ namespace Backend.Controllers
 
             if (!_service.CreateUser(user))
             {
-                // Eğer e-posta adresi kullanılıyorsa kullanıcıya uygun bir mesaj göster
                 ModelState.AddModelError("Email", "This email is already in use.");
                 return View();
             }
@@ -51,7 +50,6 @@ namespace Backend.Controllers
         {
             if (!_service.CheckUser(Email, Password))
             {
-                // Eğer e-posta adresi kullanılıyorsa kullanıcıya uygun bir mesaj göster
                 ModelState.AddModelError("Email", "Yanlıs E Mail veya Şifre Yeniden Deneyiniz");
                 return View();
             }

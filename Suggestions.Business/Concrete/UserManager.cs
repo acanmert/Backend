@@ -45,7 +45,6 @@ namespace Suggestions.Business.Concrete
             return false;
         }
 
-
         public void DeleteUser(User user)
         {
             if (!_manager.User.DoesEmailExist(user.Email))
@@ -53,6 +52,11 @@ namespace Suggestions.Business.Concrete
                 _manager.User.Delete(user);
             }
 
+        }
+
+        public void EmailConfirmation(string Email)
+        {
+            throw new NotImplementedException();
         }
 
         public List<User> GetAllUser()
