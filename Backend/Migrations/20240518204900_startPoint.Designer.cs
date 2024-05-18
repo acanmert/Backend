@@ -12,7 +12,7 @@ using Suggestions.DataAccess.EfCore;
 namespace Backend.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20240516135801_startPoint")]
+    [Migration("20240518204900_startPoint")]
     partial class startPoint
     {
         /// <inheritdoc />
@@ -32,6 +32,9 @@ namespace Backend.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("ConfirmationCode")
+                        .HasColumnType("int");
 
                     b.Property<string>("Email")
                         .IsRequired()

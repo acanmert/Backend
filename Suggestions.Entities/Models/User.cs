@@ -25,6 +25,7 @@ namespace Suggestions.Entities.Models
         public int? RequestCount { get; set; }
         [StringLength(40)]
         public string PasswordConfirmed { get; set; }
+        public int? ConfirmationCode { get; set; }
 
     }
 }

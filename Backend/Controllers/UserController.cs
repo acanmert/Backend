@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Suggestions.Business.Abstract;
 using Suggestions.Entities.Models;
 
@@ -24,22 +25,56 @@ namespace Backend.Controllers
         [HttpPost]
         public IActionResult SignUp(string Name, string SurName, string Email, string Password, string PasswordConfirmed)
         {
+            Random rnd = new Random();
+            int code = rnd.Next(1000, 9999);
+
             User user = new User()
             {
                 Name = Name,
                 SurName = SurName,
                 Email = Email,
                 Password = Password,
-                PasswordConfirmed = PasswordConfirmed
+                PasswordConfirmed = PasswordConfirmed,
+                ConfirmationCode = code
+
             };
 
-            if (!_service.CreateUser(user))
+
+            if (_service.CheckEmail(user.Email))
             {
                 ModelState.AddModelError("Email", "This email is already in use.");
                 return View();
             }
-            User? createdUser = _service.GetUser(user.Email);
-            return RedirectToAction("İndex", "Home", createdUser);
+            TempData["Email"] = user.ConfirmationCode;
+
+            return RedirectToAction("EmailVerification",user);
+
+        }
+        public IActionResult EmailVerification(User user)
+        {
+            if (TempData["Email"] != null)
+            {
+                _service.EmailSendCode(user);
+                TempData.Keep("Email");
+
+                return View(user);
+            }
+            return View();
+        }
+        [HttpPost]
+        public IActionResult EmailVerification(User user,string Code)
+        {
+            if (TempData["Email"].ToString() == Code)
+            {
+                TempData.Keep("Email");
+                user.EmailCheck = "true";
+                _service.CreateUser(user);
+                return RedirectToAction("LogIn"); // Yönlendirme yapabilirsiniz
+            }
+            TempData.Keep("Email");
+            ModelState.AddModelError("ConfirmationCode", "Hatalı kod girdiniz");
+
+            return View();
         }
         public IActionResult LogIn()
         {
@@ -54,7 +89,7 @@ namespace Backend.Controllers
                 return View();
             }
 
-            return View();
+            return RedirectToAction("Index", "Home");
         }
         public IActionResult LogOut()
         {
