@@ -1,99 +1,49 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using AutoMapper;
+using Backend.AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Suggestions.Business.Abstract;
+using Suggestions.Entities.Dto;
 using Suggestions.Entities.Models;
 
 namespace Backend.Controllers
 {
     public class UserController : Controller
     {
-        protected readonly IUserService _service;
-
-        public UserController(IUserService service)
+        private readonly IUserService _service;
+        private readonly IMapper _mapper;
+        public UserController(IUserService service, IMapper mapper)
         {
             _service = service;
+            _mapper = mapper;
         }
-
         public IActionResult Index()
         {
             return View();
         }
-        public IActionResult SignUp()
+        public IActionResult UserSettings()
         {
-            return View();
-        }
-        [HttpPost]
-        public IActionResult SignUp(string Name, string SurName, string Email, string Password, string PasswordConfirmed)
-        {
-            Random rnd = new Random();
-            int code = rnd.Next(1000, 9999);
-
-            User user = new User()
-            {
-                Name = Name,
-                SurName = SurName,
-                Email = Email,
-                Password = Password,
-                PasswordConfirmed = PasswordConfirmed,
-                ConfirmationCode = code
-
-            };
-
-
-            if (_service.CheckEmail(user.Email))
-            {
-                ModelState.AddModelError("Email", "This email is already in use.");
-                return View();
-            }
-            TempData["Email"] = user.ConfirmationCode;
-
-            return RedirectToAction("EmailVerification",user);
-
-        }
-        public IActionResult EmailVerification(User user)
-        {
-            if (TempData["Email"] != null)
-            {
-                _service.EmailSendCode(user);
-                TempData.Keep("Email");
-
-                return View(user);
-            }
-            return View();
-        }
-        [HttpPost]
-        public IActionResult EmailVerification(User user,string Code)
-        {
-            if (TempData["Email"].ToString() == Code)
-            {
-                TempData.Keep("Email");
-                user.EmailCheck = "true";
-                _service.CreateUser(user);
-                return RedirectToAction("LogIn"); // Yönlendirme yapabilirsiniz
-            }
+            string Email = TempData["Email"].ToString();
             TempData.Keep("Email");
-            ModelState.AddModelError("ConfirmationCode", "Hatalı kod girdiniz");
 
-            return View();
-        }
-        public IActionResult LogIn()
-        {
+            //var user=_service.GetUser(Email);
+            //var userDto = new UserDtoForUpdate("","","","","","");
+            //_mapper.Map(userDto,user );
+
             return View();
         }
         [HttpPost]
-        public IActionResult LogIn(string Email, string Password)
+        public IActionResult UserSettings(UserDtoForUpdate userDto)
         {
-            if (!_service.CheckUser(Email, Password))
-            {
-                ModelState.AddModelError("Email", "Yanlıs E Mail veya Şifre Yeniden Deneyiniz");
-                return View();
-            }
 
-            return RedirectToAction("Index", "Home");
+            string email = TempData["Email"].ToString();
+            User entity = _service.GetUser(email);
+            _mapper.Map(userDto, entity);
+            var deneme = 2;
+            _service.UpdateUser(entity);
+            
+
+            return RedirectToAction("Index","Home");
         }
-        public IActionResult LogOut()
-        {
-            return View();
-        }
+
     }
 }

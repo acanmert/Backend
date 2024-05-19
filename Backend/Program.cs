@@ -1,3 +1,4 @@
+using Backend.AutoMapper;
 using Backend.ServiceExtantions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -24,6 +25,7 @@ builder.Services.AddTransient<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserManager>();
 builder.Services.AddScoped<IServiceManager, ServiceManager>();
 builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 //builder.Services.AddTransient<IUserRepository, UserRepository>();
 //builder.Services.AddScoped<IUserService, UserManager>();

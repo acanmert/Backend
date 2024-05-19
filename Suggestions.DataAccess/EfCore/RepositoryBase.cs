@@ -40,7 +40,7 @@ namespace Suggestions.DataAccess.EfCore
         public T Update(T entity)
         {
             _context.Set<T>().Update(entity);
-
+            
             return entity;
         }
     }

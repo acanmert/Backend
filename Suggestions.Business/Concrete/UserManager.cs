@@ -58,7 +58,7 @@ namespace Suggestions.Business.Concrete
 
         public void DeleteUser(User user)
         {
-            if (!_manager.User.DoesEmailExist(user.Email))
+            if (_manager.User.DoesEmailExist(user.Email))
             {
                 _manager.User.Delete(user);
             }
@@ -75,7 +75,7 @@ namespace Suggestions.Business.Concrete
             return false;
         }
 
-        public void EmailSendCode(User user)
+        public void EmailSendCode(User user,string type)
         {
             string fromAddress = "suggestionscomfirmed@gmail.com";
             string key = "ouoj oxvm ytlb johd";
@@ -91,11 +91,21 @@ namespace Suggestions.Business.Concrete
             MailboxAddress mailboxAddressTo = new MailboxAddress("User", user.Email);
             mimeMessage.From.Add(mailboxAddressFrom);
             mimeMessage.To.Add(mailboxAddressTo);
-
             var bodyBuilder = new BodyBuilder();
-            bodyBuilder.TextBody = $"Onay Kodunuz + {user.ConfirmationCode}";
-            mimeMessage.Body = bodyBuilder.ToMessageBody();
-            mimeMessage.Subject = "Onay Kodu";
+            if (type=="Register")
+            {
+                
+                bodyBuilder.TextBody = $"Onay Kodunuz + {user.ConfirmationCode}";
+                mimeMessage.Body = bodyBuilder.ToMessageBody();
+                mimeMessage.Subject = "Onay Kodu";
+            }
+            else
+            {
+                bodyBuilder.TextBody = $"Kaydınız Başarılı Bir Şekilde Oluşturuldu";
+                mimeMessage.Body = bodyBuilder.ToMessageBody();
+                mimeMessage.Subject = "Kayıt Başarılı";
+            }
+
 
             SmtpClient client = new SmtpClient();
             client.Connect("smtp.gmail.com", 587, false);
@@ -118,9 +128,12 @@ namespace Suggestions.Business.Concrete
 
         public void UpdateUser(User user)
         {
-            if (!_manager.User.DoesEmailExist(user.Email))
+            if (_manager.User.DoesEmailExist(user.Email))
             {
-                _manager.User.Update(user);
+
+                
+                var entity=_manager.User.Update(user);
+                _manager.Save();
             }
         }
     }
