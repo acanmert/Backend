@@ -12,7 +12,7 @@ namespace Suggestions.Business.Abstract
         List<User> GetAllUser();
         User? GetUser(string Email);
         bool CreateUser(User user);
-        void UpdateUser(User user);
+        void UpdateUser(User user,string email);
         void DeleteUser(User user);
         bool CheckUser(string Email,string password);
         void EmailSendCode(User user,string type);

@@ -9,6 +9,8 @@ namespace Backend.AutoMapper
         public MappingProfile()
         {
             CreateMap<UserDtoForUpdate, User>();
+            CreateMap<User, UserDto>();
+            CreateMap<User, UserDtoForUpdate>();
         }
     }
 }

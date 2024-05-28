@@ -1,25 +1,22 @@
-﻿using MailKit.Net.Smtp;
-using Microsoft.EntityFrameworkCore;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Mail;
+using System.Text;
+using System.Threading.Tasks;
 using MimeKit;
 using Suggestions.Business.Abstract;
 using Suggestions.DataAccess.Concrats;
 using Suggestions.Entities.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Mail;
-using System.Text;
-using System.Threading.Tasks;
 using SmtpClient = MailKit.Net.Smtp.SmtpClient;
 
 namespace Suggestions.Business.Concrete
 {
-    public class UserManager : IUserService
+    public class MailManager : IMailService
     {
-        private readonly IRepositoryManager _manager;
+        protected readonly IRepositoryManager _manager;
 
-        public UserManager(IRepositoryManager manager)
+        public MailManager(IRepositoryManager manager)
         {
             _manager = manager;
         }
@@ -29,52 +26,19 @@ namespace Suggestions.Business.Concrete
             return _manager.User.DoesEmailExist(Email);
         }
 
-        public bool CheckUser(string Email, string password)
-        {
-            var user = GetUser(Email);
-            if (user == null)
-            {
-                return false;
-            }
-            if (user.Password == password)
-            {
-                return true;
-            }
-            return false;
-        }
-
-        public bool CreateUser(User user)
-        {
-
-            if (_manager.User.Create(user) is null)
-            {
-                return false;
-            }
-            
-            _manager.Save();
-            return true;
-
-        }
-
-        public void DeleteUser(User user)
-        {
-            if (_manager.User.DoesEmailExist(user.Email))
-            {
-                _manager.User.Delete(user);
-            }
-
-        }
-
         public bool EmailConfirmation(User user, int? UserCode)
         {
             if (user.ConfirmationCode == UserCode)
             {
+                user.EmailCheck = "true";
+                _manager.User.Create(user);
                 return true;
             }
             return false;
         }
 
-        public void EmailSendCode(User user,string type)
+
+        public void EmailSendCode(User user, string type)
         {
             string fromAddress = "suggestionscomfirmed@gmail.com";
             string key = "ouoj oxvm ytlb johd";
@@ -91,9 +55,9 @@ namespace Suggestions.Business.Concrete
             mimeMessage.From.Add(mailboxAddressFrom);
             mimeMessage.To.Add(mailboxAddressTo);
             var bodyBuilder = new BodyBuilder();
-            if (type=="Register")
+            if (type == "Register")
             {
-                
+
                 bodyBuilder.TextBody = $"Onay Kodunuz + {user.ConfirmationCode}";
                 mimeMessage.Body = bodyBuilder.ToMessageBody();
                 mimeMessage.Subject = "Onay Kodu";
@@ -114,24 +78,5 @@ namespace Suggestions.Business.Concrete
 
         }
 
-        public List<User> GetAllUser()
-        {
-            return _manager.User.GetAlUsers();
-        }
-
-        public User? GetUser(string Email)
-        {
-            var Liste = _manager.User.GetAlUsers();
-            return Liste.FirstOrDefault(u => u.Email == Email);
-        }
-
-        public void UpdateUser(User user, string email)
-        {
-            if (_manager.User.DoesEmailExist(email))
-            {
-                var entity=_manager.User.Update(user);
-                _manager.Save();
-            }
-        }
     }
 }

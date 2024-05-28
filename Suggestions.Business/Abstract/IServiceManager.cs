@@ -9,5 +9,6 @@ namespace Suggestions.Business.Abstract
     public class IServiceManager
     {
         IUserService UserService { get; }
+        IMailService MailService { get; }
     }
 }

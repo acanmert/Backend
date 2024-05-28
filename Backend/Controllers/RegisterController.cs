@@ -7,11 +7,13 @@ namespace Backend.Controllers
 {
     public class RegisterController : Controller
     {
-        protected readonly IUserService _service;
+        protected readonly IUserService _userService;
+        protected readonly IMailService _mailService;
 
-        public RegisterController(IUserService service)
+        public RegisterController(IUserService service, IMailService mailService)
         {
-            _service = service;
+            _userService = service;
+            _mailService = mailService;
         }
 
         public IActionResult Index()
@@ -25,7 +27,7 @@ namespace Backend.Controllers
         [HttpPost]
         public IActionResult SignUp(string Name, string SurName, string Email, string Password, string PasswordConfirmed)
         {
-            if (_service.CheckEmail(Email))
+            if (_mailService.CheckEmail(Email))
             {
                 ModelState.AddModelError("Email", "Bu Email Kullanılıyor");
                 return View();
@@ -60,7 +62,7 @@ namespace Backend.Controllers
         {
             if (TempData["Code"] != null)
             {
-                _service.EmailSendCode(user, "Register");
+                _mailService.EmailSendCode(user, "Register");
                 TempData.Keep("Code");
 
                 return View(user);
@@ -70,12 +72,11 @@ namespace Backend.Controllers
         [HttpPost]
         public IActionResult EmailVerification(User user, string Code)
         {
-            if (TempData["Code"].ToString() == Code)
+            
+            if (_mailService.EmailConfirmation(user,int.Parse(Code)))
             {
                 TempData.Keep("Code");
-                user.EmailCheck = "true";
-                _service.CreateUser(user);
-                _service.EmailSendCode(user, "Login");
+                _mailService.EmailSendCode(user, "Login");
 
                 return RedirectToAction("LogIn"); // Yönlendirme yapabilirsiniz
             }
@@ -91,7 +92,7 @@ namespace Backend.Controllers
         [HttpPost]
         public IActionResult LogIn(string Email, string Password)
         {
-            if (!_service.CheckUser(Email, Password))
+            if (!_userService.CheckUser(Email, Password))
             {
                 ModelState.AddModelError("Email", "Yanlıs E Mail veya Şifre Yeniden Deneyiniz");
                 return View();

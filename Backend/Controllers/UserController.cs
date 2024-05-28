@@ -25,11 +25,10 @@ namespace Backend.Controllers
             string Email = TempData["Email"].ToString();
             TempData.Keep("Email");
 
-            //var user=_service.GetUser(Email);
-            //var userDto = new UserDtoForUpdate("","","","","","");
-            //_mapper.Map(userDto,user );
+            User user=_service.GetUser(Email);
+            UserDtoForUpdate userDtoForUpdate = _mapper.Map<UserDtoForUpdate>(user);
 
-            return View();
+            return View(userDtoForUpdate);
         }
         [HttpPost]
         public IActionResult UserSettings(UserDtoForUpdate userDto)
@@ -37,10 +36,10 @@ namespace Backend.Controllers
 
             string email = TempData["Email"].ToString();
             User entity = _service.GetUser(email);
-            _mapper.Map(userDto, entity);
+            User user= _mapper.Map(userDto, entity);
             var deneme = 2;
-            _service.UpdateUser(entity);
-            
+            _service.UpdateUser(user,email);
+            TempData["Email"] = user.Email;
 
             return RedirectToAction("Index","Home");
         }
