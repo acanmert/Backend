@@ -1,0 +1,118 @@
+﻿<head>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        suggestion_form {
+            background-color: #fff;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            font-weight: 700;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+            .input-group label {
+                flex: 0 0 200px;
+                margin-right: 20px;
+                color: #333;
+            }
+
+            .input-group input,
+            .input-group select {
+                flex: 1;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                outline: none;
+            }
+
+                .input-group input:focus,
+                .input-group select:focus {
+                    border-color: #ff5c5c;
+                    box-shadow: 0 0 5px rgba(255, 92, 92, 0.5);
+                }
+
+                .input-group input[type="radio"] {
+                    margin-right: 5px;
+                }
+
+            .input-group div {
+                margin-right: 15px;
+            }
+
+        button {
+            padding: 10px 20px;
+            background-color: #ff5c5c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            outline: none;
+            transition: background-color 0.3s ease;
+            align-self: flex-end;
+        }
+
+            button:hover {
+                background-color: #ff4242;
+            }
+    </style>
+</head>
+
+<form class="suggestion_form">
+    <div class="input-group">
+        <input type="hidden" name="fileName" id="fileName" value="@Model.ThisFileName">
+    </div>
+
+    <div class="input-group">
+        <label for="benzerlikName">Benzerlik seçiniz <br> (Birden Fazla Seçim İçin CTRL Tuşuna Basılı Tutun)</label>
+        <select type="text" name="selectedFeatures" id="selectedFeatures" multiple>
+            @foreach (var file in Model.FieldList)
+            {
+                <option value="@file">@file</option>
+            }
+        </select>
+    </div>
+
+    <div class="input-group">
+        <label for="getProductName">Aradığınız Ürünü Giriniz</label>
+        <input type="text" name="p_name" id="p_name">
+    </div>
+
+    <div class="input-group">
+        <label for="productName">Veri Setindeki Product Name'i Giriniz</label>
+        <select type="text" name="p_pk" id="p_pk">
+            @foreach (var file in Model.FieldList)
+            {
+                <option value="@file">@file</option>
+            }
+        </select>
+    </div>
+
+    <div class="input-group">
+        <label>Primary Key Nümerik Mi?</label>
+        <div>
+            <input type="radio" id="Evet" name="p_type" value="Evet">
+            <label for="evet">Evet</label>
+        </div>
+        <div>
+            <input type="radio" id="Hayir" name="p_type" value="Hayir">
+            <label for="hayir">Hayır</label>
+        </div>
+    </div>
+
+    <button asp-controller="Suggestions" asp-action="ProcessSuggestions" class="btn btn-danger">Öneri al</button>
+</form>

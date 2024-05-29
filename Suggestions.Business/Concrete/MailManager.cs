@@ -30,8 +30,7 @@ namespace Suggestions.Business.Concrete
         {
             if (user.ConfirmationCode == UserCode)
             {
-                user.EmailCheck = "true";
-                _manager.User.Create(user);
+
                 return true;
             }
             return false;

@@ -24,6 +24,7 @@ builder.Services.AddTransient<IUserRepository, UserRepository>();
 
 builder.Services.AddScoped<IMailService, MailManager>();
 builder.Services.AddScoped<IUserService, UserManager>();
+builder.Services.AddScoped<ISuggestionsService, SuggestionsManager>();
 builder.Services.AddScoped<IServiceManager, ServiceManager>();
 builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
 builder.Services.AddAutoMapper(typeof(MappingProfile));

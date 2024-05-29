@@ -76,6 +76,8 @@ namespace Backend.Controllers
             if (_mailService.EmailConfirmation(user,int.Parse(Code)))
             {
                 TempData.Keep("Code");
+                user.EmailCheck = "true";
+                _userService.CreateUser(user);
                 _mailService.EmailSendCode(user, "Login");
 
                 return RedirectToAction("LogIn"); // Yönlendirme yapabilirsiniz
@@ -100,7 +102,7 @@ namespace Backend.Controllers
             TempData["Email"] = Email;
             TempData.Keep("Email");
 
-            return RedirectToAction("UserSettings", "User");
+            return RedirectToAction("Index", "Suggestions");
         }
         public IActionResult LogOut()
         {

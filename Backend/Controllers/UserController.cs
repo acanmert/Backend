@@ -18,6 +18,7 @@ namespace Backend.Controllers
         }
         public IActionResult Index()
         {
+            
             return View();
         }
         public IActionResult UserSettings()
@@ -37,7 +38,6 @@ namespace Backend.Controllers
             string email = TempData["Email"].ToString();
             User entity = _service.GetUser(email);
             User user= _mapper.Map(userDto, entity);
-            var deneme = 2;
             _service.UpdateUser(user,email);
             TempData["Email"] = user.Email;
 
