@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Suggestions.Business.Abstract
 {
-    public class IServiceManager
+    public interface IServiceManager
     {
         IUserService UserService { get; }
         IMailService MailService { get; }
+        ISuggestionsService SuggestionsService { get; }
     }
 }

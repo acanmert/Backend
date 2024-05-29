@@ -7,13 +7,13 @@ namespace Backend.Controllers
 {
     public class RegisterController : Controller
     {
-        protected readonly IUserService _userService;
-        protected readonly IMailService _mailService;
 
-        public RegisterController(IUserService service, IMailService mailService)
+        protected readonly IServiceManager _serviceManager;
+
+        public RegisterController(IServiceManager serviceManager)
         {
-            _userService = service;
-            _mailService = mailService;
+
+            _serviceManager = serviceManager;
         }
 
         public IActionResult Index()
@@ -27,7 +27,7 @@ namespace Backend.Controllers
         [HttpPost]
         public IActionResult SignUp(string Name, string SurName, string Email, string Password, string PasswordConfirmed)
         {
-            if (_mailService.CheckEmail(Email))
+            if (_serviceManager.MailService.CheckEmail(Email))
             {
                 ModelState.AddModelError("Email", "Bu Email Kullanılıyor");
                 return View();
@@ -62,7 +62,7 @@ namespace Backend.Controllers
         {
             if (TempData["Code"] != null)
             {
-                _mailService.EmailSendCode(user, "Register");
+                _serviceManager.MailService.EmailSendCode(user, "Register");
                 TempData.Keep("Code");
 
                 return View(user);
@@ -72,41 +72,21 @@ namespace Backend.Controllers
         [HttpPost]
         public IActionResult EmailVerification(User user, string Code)
         {
-            
-            if (_mailService.EmailConfirmation(user,int.Parse(Code)))
+
+            if (_serviceManager.MailService.EmailConfirmation(user, int.Parse(Code)))
             {
                 TempData.Keep("Code");
                 user.EmailCheck = "true";
-                _userService.CreateUser(user);
-                _mailService.EmailSendCode(user, "Login");
+                _serviceManager.UserService.CreateUser(user);
+                _serviceManager.MailService.EmailSendCode(user, "Login");
 
-                return RedirectToAction("LogIn"); // Yönlendirme yapabilirsiniz
+                return RedirectToAction("LogIn","Account"); // Yönlendirme yapabilirsiniz
             }
             TempData.Keep("Code");
             ModelState.AddModelError("ConfirmationCode", "Hatalı kod girdiniz");
 
             return View();
         }
-        public IActionResult LogIn()
-        {
-            return View();
-        }
-        [HttpPost]
-        public IActionResult LogIn(string Email, string Password)
-        {
-            if (!_userService.CheckUser(Email, Password))
-            {
-                ModelState.AddModelError("Email", "Yanlıs E Mail veya Şifre Yeniden Deneyiniz");
-                return View();
-            }
-            TempData["Email"] = Email;
-            TempData.Keep("Email");
 
-            return RedirectToAction("Index", "Suggestions");
-        }
-        public IActionResult LogOut()
-        {
-            return View();
-        }
     }
 }

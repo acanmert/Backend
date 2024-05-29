@@ -7,27 +7,27 @@ namespace Backend.Controllers
     public class SuggestionsController : Controller
     {
         private static readonly HttpClient _client = new HttpClient();
-        private ISuggestionsService _suggestionsService;
+        private IServiceManager _serviceManager;
 
-        public SuggestionsController(ISuggestionsService suggestionsService)
+        public SuggestionsController(IServiceManager serviceManager)
         {
-            _suggestionsService = suggestionsService;
+            _serviceManager = serviceManager;
         }
 
         public IActionResult Index()
         {
-            return View(_suggestionsService.GetFile());
+            return View(_serviceManager.SuggestionsService.GetFile());
         }
         [HttpGet]
         public IActionResult DataUpload()
         {
 
-            return View(_suggestionsService.GetFile());
+            return View(_serviceManager.SuggestionsService.GetFile());
         }
         [HttpPost]
-        public async Task<IActionResult> DataUpload(IFormFile formFile)
+        public  IActionResult DataUpload(IFormFile formFile)
         {
-            var dataUpload = _suggestionsService.DataUpload(formFile);
+            var dataUpload =  _serviceManager.SuggestionsService.DataUpload(formFile);
             return View(dataUpload);
 
         }
@@ -35,8 +35,8 @@ namespace Backend.Controllers
         {
             FileUploadViewModel file = new FileUploadViewModel();
 
-            file.FieldList = _suggestionsService.Header(fileName);
-            file.FileNames = _suggestionsService.GetFile();
+            file.FieldList = _serviceManager.SuggestionsService.Header(fileName);
+            file.FileNames = _serviceManager.SuggestionsService.GetFile();
             file.ThisFileName = fileName;
             return View(file);
         }
@@ -44,8 +44,12 @@ namespace Backend.Controllers
         {
 
 
-            var recommendations = await _suggestionsService.Get_recommendations(fileName, selectedFeatures, p_pk, p_name, p_type);
+            var recommendations = await _serviceManager.SuggestionsService.Get_recommendations(fileName, selectedFeatures, p_pk, p_name, p_type);
             return View(recommendations);
+        }
+        public IActionResult LogUser()
+        {
+            return View();
         }
 
     }
