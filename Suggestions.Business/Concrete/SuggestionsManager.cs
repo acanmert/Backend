@@ -56,7 +56,7 @@ namespace Suggestions.Business.Concrete
             return files;
 
         }
-        public async Task<List<string>> Get_recommendations(string fileName, List<string> benzerlikName, string p_primaryKey, string getProductName, string p_type)
+        public async Task<List<string>> GetRecommendations(string fileName, List<string> benzerlikName, string p_primaryKey, string getProductName, string p_type)
         {
             string benzerlik = string.Join(",", benzerlikName);
             string secim = fileName;

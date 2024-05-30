@@ -18,16 +18,7 @@ builder.Services.AddControllersWithViews();
 //var configuration = new ConfigurationBuilder()
 //            .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
 //            .AddJsonFile("appsettings.json\", optional: false, reloadOnChange: true").Build();
-builder.Services.ConfigureSqlContext(builder.Configuration);
-
-builder.Services.AddTransient<IUserRepository, UserRepository>();
-
-builder.Services.AddScoped<IMailService, MailManager>();
-builder.Services.AddScoped<IUserService, UserManager>();
-builder.Services.AddScoped<ISuggestionsService, SuggestionsManager>();
-builder.Services.AddScoped<IServiceManager, ServiceManager>();
-builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
-builder.Services.AddAutoMapper(typeof(MappingProfile));
+builder.Services.ConfigureServices(builder.Configuration);
 
 //builder.Services.AddTransient<IUserRepository, UserRepository>();
 //builder.Services.AddScoped<IUserService, UserManager>();

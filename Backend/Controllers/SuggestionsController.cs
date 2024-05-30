@@ -44,7 +44,7 @@ namespace Backend.Controllers
         {
 
 
-            var recommendations = await _serviceManager.SuggestionsService.Get_recommendations(fileName, selectedFeatures, p_pk, p_name, p_type);
+            var recommendations = await _serviceManager.SuggestionsService.GetRecommendations(fileName, selectedFeatures, p_pk, p_name, p_type);
             return View(recommendations);
         }
         public IActionResult LogUser()

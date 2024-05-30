@@ -12,7 +12,7 @@ namespace Suggestions.Business.Abstract
     {
         List<string> GetFile();
         List<string> DataUpload(IFormFile formFile);
-        Task<List<string>> Get_recommendations(string fileName, List<string> benzerlikName, string p_primaryKey, string getProductName, string p_type);
+        Task<List<string>> GetRecommendations(string fileName, List<string> benzerlikName, string p_primaryKey, string getProductName, string p_type);
         List<string> Header(string fileName);
         FileUploadViewModel Suggestions(string fileName);
     }
