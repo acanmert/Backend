@@ -3,45 +3,20 @@
     Layout = "_NavBarLayout";
 }
 <head>
-    <style>
-
-    </style>
-</head>
-
-<head>
     <body>
-        <header>
-            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Suggestions" asp-action="">Giris</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Suggestions" asp-action="DataUpload">Data Upload</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="UserSettings">Hesap Ayarları</a>
-                    </li>
-                </ul>
-            </div>
-        </header>
-
         <form asp-controller="Suggestions" asp-action="DataUpload" method="post" enctype="multipart/form-data">
             <div class=" cmp2 col">
                 <h2 id="yuklenenDosyalar">Yüklenen Dosyalar</h2>
                 <div class="dosyalar">
                     @if (Model != null)
                     {
-
                         @foreach (var fileName in Model)
                         {
                             <button asp-controller="Suggestions" asp-action="Suggestions" asp-route-fileName="@fileName" class="btn btn-s btn-danger"> @fileName </button>
                         }
-
                     }
                 </div>
             </div>
         </form>
-
     </body>
 </head>

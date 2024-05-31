@@ -56,7 +56,7 @@ namespace Suggestions.Business.Concrete
             return files;
 
         }
-        public async Task<List<string>> GetRecommendations(string fileName, List<string> benzerlikName, string p_primaryKey, string getProductName, string p_type)
+        public async Task<List<string>> GetRecommendations(string fileName, List<string> benzerlikName, string p_primaryKey, string getProductName, string p_type,int requestCount)
         {
             string benzerlik = string.Join(",", benzerlikName);
             string secim = fileName;
@@ -67,7 +67,7 @@ namespace Suggestions.Business.Concrete
 
 
             // Flask API'sine GET isteği gönder
-            string apiUrl = $"http://127.0.0.1:5000/recommendations?secim={secim}&selected_features={string.Join(",", selectedFeatures)}&p_name={p_name}&p_pk={p_pk}&p_type={pType}";
+            string apiUrl = $"http://127.0.0.1:5000/recommendations?secim={secim}&selected_features={string.Join(",", selectedFeatures)}&p_name={p_name}&p_pk={p_pk}&p_type={pType}&requrst_count={requestCount}";
             HttpResponseMessage response = await _client.GetAsync(apiUrl);
 
             if (response.IsSuccessStatusCode)

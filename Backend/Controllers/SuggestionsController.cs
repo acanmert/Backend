@@ -8,6 +8,7 @@ namespace Backend.Controllers
     {
         private static readonly HttpClient _client = new HttpClient();
         private IServiceManager _serviceManager;
+        private static int _queryCount = 0;
 
         public SuggestionsController(IServiceManager serviceManager)
         {
@@ -16,6 +17,9 @@ namespace Backend.Controllers
 
         public IActionResult Index()
         {
+
+
+
             return View(_serviceManager.SuggestionsService.GetFile());
         }
         [HttpGet]
@@ -25,14 +29,17 @@ namespace Backend.Controllers
             return View(_serviceManager.SuggestionsService.GetFile());
         }
         [HttpPost]
-        public  IActionResult DataUpload(IFormFile formFile)
+        public IActionResult DataUpload(IFormFile formFile)
         {
-            var dataUpload =  _serviceManager.SuggestionsService.DataUpload(formFile);
+
+            var dataUpload = _serviceManager.SuggestionsService.DataUpload(formFile);
             return View(dataUpload);
 
         }
         public IActionResult Suggestions(string fileName)
         {
+            string email = TempData["Email"].ToString();
+            var user = _serviceManager.UserService.GetUser(email);
             FileUploadViewModel file = new FileUploadViewModel();
 
             file.FieldList = _serviceManager.SuggestionsService.Header(fileName);
@@ -43,8 +50,7 @@ namespace Backend.Controllers
         public async Task<IActionResult> ProcessSuggestions(string fileName, List<string> selectedFeatures, string p_pk, string p_name, string p_type)
         {
 
-
-            var recommendations = await _serviceManager.SuggestionsService.GetRecommendations(fileName, selectedFeatures, p_pk, p_name, p_type);
+            var recommendations = await _serviceManager.SuggestionsService.GetRecommendations(fileName, selectedFeatures, p_pk, p_name, p_type, _queryCount);
             return View(recommendations);
         }
         public IActionResult LogUser()

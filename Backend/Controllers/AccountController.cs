@@ -29,6 +29,7 @@ namespace Backend.Controllers
                 ModelState.AddModelError("Email", "Yanlıs E Mail veya Şifre Yeniden Deneyiniz");
                 return View();
             }
+            var user=_serviceManager.UserService.GetUser(Email);
             TempData["Email"] = Email;
             TempData.Keep("Email");
 
@@ -36,7 +37,7 @@ namespace Backend.Controllers
         }
         public IActionResult LogOut()
         {
-            return View();
+            return RedirectToAction("LogIn");
         }
     }
 }
