@@ -1,41 +1,59 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Suggestions.Business.Abstract;
 using Suggestions.Entities.Models;
 
 namespace Backend.Controllers
 {
+    [Authorize]
+
     public class RegisterController : Controller
     {
-
+        protected readonly ILoggerService _loggerService;
         protected readonly IServiceManager _serviceManager;
 
-        public RegisterController(IServiceManager serviceManager)
+        public RegisterController(IServiceManager serviceManager, ILoggerService loggerService)
         {
 
             _serviceManager = serviceManager;
+            _loggerService = loggerService;
         }
 
         public IActionResult Index()
         {
             return View();
         }
+        [AllowAnonymous]
         public IActionResult SignUp()
         {
+            if (User.Identity != null && User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Suggestions");
+            }
             return View();
         }
+
         [HttpPost]
+        [AllowAnonymous]
         public IActionResult SignUp(string Name, string SurName, string Email, string Password, string PasswordConfirmed)
         {
             if (_serviceManager.MailService.CheckEmail(Email))
             {
-                ModelState.AddModelError("Email", "Bu Email Kullanılıyor");
+                string message = $"{Email} bu email adresi kullanılıyor";
+                _loggerService.LogError(message);
+                ModelState.AddModelError("Email", message);
                 return View();
             }
 
             if (Password != PasswordConfirmed)
             {
                 ModelState.AddModelError("Password", "Girilen Şifreler Aynı Değil");
+                return View();
+            }
+            if (Name.Length>20 && SurName.Length>20)
+            {
+                ModelState.AddModelError("Name", "İsim Çok Uzun");
                 return View();
             }
 

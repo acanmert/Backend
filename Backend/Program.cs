@@ -4,11 +4,14 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Suggestions.Business.Abstract;
 using Suggestions.Business.Concrete;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Suggestions.DataAccess.Concrats;
 using Suggestions.DataAccess.EfCore;
+using NLog;
+
 
 var builder = WebApplication.CreateBuilder(args);
-
+LogManager.Setup().LoadConfigurationFromFile(string.Concat(Directory.GetCurrentDirectory(), "/nLog.config"));
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
@@ -46,7 +49,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

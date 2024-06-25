@@ -86,7 +86,7 @@
 <body>
     <div class="header_container">
         <h2>Suggestions</h2>
-        <form method="post" action="@Url.Action("Download", "Home")">
+        <form method="post" action="@Url.Action("Download", "Suggestions")">
             <button type="submit" class="btn btn-primary">Download</button>
             <input type="hidden" name="data" value="@string.Join(",", Model)" />
         </form>

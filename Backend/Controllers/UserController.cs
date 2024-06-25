@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Backend.AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Suggestions.Business.Abstract;
 using Suggestions.Entities.Dto;
@@ -7,6 +8,7 @@ using Suggestions.Entities.Models;
 
 namespace Backend.Controllers
 {
+    [Authorize]
     public class UserController : Controller
     {
         private readonly IUserService _service;
