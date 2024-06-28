@@ -23,7 +23,7 @@ namespace Backend.Controllers
 
         public IActionResult Index()
         {
-            
+
             return View();
         }
         [HttpGet]
@@ -45,8 +45,8 @@ namespace Backend.Controllers
                 ModelState.AddModelError("Email", "Yanlıs E Mail veya Şifre Yeniden Deneyiniz");
                 return View();
             }
-            var user=_serviceManager.UserService.GetUser(Email);
-           // var token = GenerateJwtToken(user);
+            var user = _serviceManager.UserService.GetUser(Email);
+            // var token = GenerateJwtToken(user);
             //TempData["Token"] = token;
             TempData["Email"] = Email;
             TempData.Keep("Email");
@@ -105,4 +105,3 @@ namespace Backend.Controllers
 
     }
 }
-

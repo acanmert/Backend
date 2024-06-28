@@ -25,7 +25,7 @@ namespace Backend.Controllers
             return View();
         }
         [AllowAnonymous]
-        public IActionResult SignUp()
+        public IActionResult Register()
         {
             if (User.Identity != null && User.Identity.IsAuthenticated)
             {
@@ -36,11 +36,11 @@ namespace Backend.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public IActionResult SignUp(string Name, string SurName, string Email, string Password, string PasswordConfirmed)
+        public IActionResult Register(string Name, string SurName, string Email, string Password, string PasswordConfirmed)
         {
             if (_serviceManager.MailService.CheckEmail(Email))
             {
-                string message = $"{Email} bu email adresi kullanılıyor";
+                string message = "Bu email adresi kullanılıyor";
                 _loggerService.LogError(message);
                 ModelState.AddModelError("Email", message);
                 return View();
@@ -76,6 +76,7 @@ namespace Backend.Controllers
             return RedirectToAction("EmailVerification", user);
 
         }
+        [AllowAnonymous]
         public IActionResult EmailVerification(User user)
         {
             if (TempData["Code"] != null)
@@ -88,6 +89,7 @@ namespace Backend.Controllers
             return View();
         }
         [HttpPost]
+        [AllowAnonymous]
         public IActionResult EmailVerification(User user, string Code)
         {
 

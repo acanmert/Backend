@@ -34,11 +34,14 @@ namespace Backend.ServiceExtantions
             services.AddScoped<IRepositoryManager, RepositoryManager>();
             services.AddAutoMapper(typeof(MappingProfile));
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie(x =>
-                {
-                    x.Cookie.Name = "MyAppCookie";
-                    x.LoginPath = "/Account/LogIn/";
-                });
+                  .AddCookie(x =>
+                  {
+                      x.Cookie.Name = "MyAppCookie";
+                      x.LoginPath = "/Account/LogIn/";
+                      x.ExpireTimeSpan = TimeSpan.FromMinutes(30); // Oturum süresi 30 dakika
+                      x.SlidingExpiration = true;
+                  });
+
             //services.AddAuthentication(options =>
             //{
             //    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

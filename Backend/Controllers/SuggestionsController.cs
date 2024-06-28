@@ -20,19 +20,26 @@ namespace Backend.Controllers
 
         public IActionResult Index()
         {
-            return View(_serviceManager.SuggestionsService.GetFile());
+            string email = TempData["Email"].ToString();
+            TempData.Keep("Email");
+
+            return View(_serviceManager.SuggestionsService.GetFile(email));
         }
         [HttpGet]
         public IActionResult DataUpload()
         {
+            string email = TempData["Email"].ToString();
+            TempData.Keep("Email");
 
-            return View(_serviceManager.SuggestionsService.GetFile());
+            return View(_serviceManager.SuggestionsService.GetFile(email));
         }
         [HttpPost]
         public IActionResult DataUpload(IFormFile formFile)
         {
+            string email = TempData["Email"].ToString();
+            TempData.Keep("Email");
 
-            var dataUpload = _serviceManager.SuggestionsService.DataUpload(formFile);
+            var dataUpload = _serviceManager.SuggestionsService.DataUpload(formFile, email);
             return View(dataUpload);
 
         }
@@ -44,17 +51,18 @@ namespace Backend.Controllers
             var user = _serviceManager.UserService.GetUser(email);
             FileUploadViewModel file = new FileUploadViewModel();
 
-            file.FieldList = _serviceManager.SuggestionsService.Header(fileName);
-            file.FileNames = _serviceManager.SuggestionsService.GetFile();
+            file.FieldList = _serviceManager.SuggestionsService.Header(fileName,email);
+            file.FileNames = _serviceManager.SuggestionsService.GetFile(email);
             file.ThisFileName = fileName;
             return View(file);
         }
         public async Task<IActionResult> ProcessSuggestions(string fileName, List<string> selectedFeatures, string p_pk, string p_name, string p_type)
         {
+            string email = TempData["Email"].ToString();
 
             //string token = TempData["Token"].ToString();
             //_client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
-            var recommendations = await _serviceManager.SuggestionsService.GetRecommendations(fileName, selectedFeatures, p_pk, p_name, p_type, _queryCount);
+            var recommendations = await _serviceManager.SuggestionsService.GetRecommendations(fileName, selectedFeatures, p_pk, p_name, p_type, _queryCount,email);
 
             TempData.Keep("Email");
 

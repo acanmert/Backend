@@ -1,0 +1,51 @@
+﻿@model Suggestions.Entities.Dto.UserDto
+
+@{
+    ViewData["Title"] = "Register";
+}
+<div class="row wrapper">
+    <h1>Kayıt Ol</h1>
+    <div class="">
+        <form asp-action="Register" method="post" id="form1">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="input-box">
+                <input asp-for="Name" required class="input-box1 name" placeholder="İsim:" id="name" />
+                <label>İsim:</label>
+                <span asp-validation-for="Name" class="input-box1"></span>
+            </div>
+            <div class="input-box">
+                <input asp-for="SurName" class="input-box1 surname" placeholder="Soyisim:" />
+                <label>Soyisim:</label>
+                <span asp-validation-for="SurName" class="input-box1"></span>
+            </div>
+            <div class="input-box">
+                <input asp-for="Email" class="input-box1 mail" type="email" placeholder="E-Mail:" />
+                <label>E-Mail:</label>
+                <span asp-validation-for="Email" class="input-box1"></span>
+            </div>
+            <div class="input-box">
+                <input asp-for="Password" class="input-box1 password" type="password" placeholder="Şifre:" />
+                <label>Şifre:</label>
+                <span asp-validation-for="Password" class="input-box1"></span>
+            </div>
+            <div class="input-box">
+                <input asp-for="PasswordConfirmed" class="input-box1 password2" type="password" placeholder="Şifreyi tekrar girin:" />
+                <label>Şifreyi tekrar girin:</label>
+                <span asp-validation-for="PasswordConfirmed" class="input-box1"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Kayıt Ol" class="btn btn-primary" id="btn1" onclick="onclickk()" onmouseover="mouseoverbtn()" onmouseout="mouseoutbtn()" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="backtolist">
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

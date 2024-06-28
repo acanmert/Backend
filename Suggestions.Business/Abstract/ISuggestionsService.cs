@@ -10,10 +10,10 @@ namespace Suggestions.Business.Abstract
 {
     public interface ISuggestionsService
     {
-        List<string> GetFile();
-        List<string> DataUpload(IFormFile formFile);
-        Task<List<string>> GetRecommendations(string fileName, List<string> benzerlikName, string p_primaryKey, string getProductName, string p_type,int requestCount);
-        List<string> Header(string fileName);
-        FileUploadViewModel Suggestions(string fileName);
+        List<string> GetFile(string email);
+        List<string> DataUpload(IFormFile formFile,string Email);
+        Task<List<string>> GetRecommendations(string fileName, List<string> benzerlikName, string p_primaryKey, string getProductName, string p_type,int requestCount, string Email);
+        List<string> Header(string fileName,string email);
+        FileUploadViewModel Suggestions(string fileName,string email);
     }
 }

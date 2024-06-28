@@ -94,3 +94,299 @@
 2024-06-25 17:09:34.4070 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
 2024-06-25 17:09:34.4294 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
 2024-06-25 17:09:34.4492 Info Configuration initialized.
+2024-06-25 22:19:59.1920 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-25 22:19:59.2781 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-25 22:19:59.2956 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-25 22:19:59.3238 Info Configuration initialized.
+2024-06-25 22:21:34.0674 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-25 22:21:34.0995 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-25 22:21:34.1192 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-25 22:21:34.1411 Info Configuration initialized.
+2024-06-25 22:24:34.8205 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-25 22:24:34.8594 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-25 22:24:34.8875 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-25 22:24:34.9234 Info Configuration initialized.
+2024-06-25 22:26:56.6650 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-25 22:26:56.7054 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-25 22:26:56.7281 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-25 22:26:56.7501 Info Configuration initialized.
+2024-06-25 22:29:03.4355 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-25 22:29:03.4673 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-25 22:29:03.4838 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-25 22:29:03.5023 Info Configuration initialized.
+2024-06-25 22:32:38.0092 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-25 22:32:38.0497 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-25 22:32:38.0744 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-25 22:32:38.1008 Info Configuration initialized.
+2024-06-25 22:35:09.3167 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-25 22:35:09.3609 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-25 22:35:09.3856 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-25 22:35:09.4102 Info Configuration initialized.
+2024-06-26 01:01:55.4416 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:01:55.4788 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:01:55.5026 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:01:55.5303 Info Configuration initialized.
+2024-06-26 01:07:25.5401 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:07:25.5695 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:07:25.5913 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:07:25.6199 Info Configuration initialized.
+2024-06-26 01:13:16.1431 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:13:16.1728 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:13:16.1893 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:13:16.2083 Info Configuration initialized.
+2024-06-26 01:16:50.1940 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:16:50.2309 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:16:50.2608 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:16:50.2948 Info Configuration initialized.
+2024-06-26 01:18:17.5459 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:18:17.5867 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:18:17.6090 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:18:17.6435 Info Configuration initialized.
+2024-06-26 01:20:58.1753 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:20:58.2271 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:20:58.2572 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:20:58.2954 Info Configuration initialized.
+2024-06-26 01:22:51.6068 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:22:51.6338 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:22:51.6482 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:22:51.6685 Info Configuration initialized.
+2024-06-26 01:24:31.2001 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:24:31.2297 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:24:31.2578 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:24:31.2869 Info Configuration initialized.
+2024-06-26 01:25:42.6703 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:25:42.7030 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:25:42.7319 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:25:42.7614 Info Configuration initialized.
+2024-06-26 01:26:50.9223 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:26:50.9542 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:26:50.9746 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:26:50.9746 Info Configuration initialized.
+2024-06-26 01:28:36.6360 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:28:36.6741 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:28:36.7079 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:28:36.7482 Info Configuration initialized.
+2024-06-26 01:29:57.0632 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:29:57.0943 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:29:57.1171 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:29:57.1399 Info Configuration initialized.
+2024-06-26 01:31:30.0572 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:31:30.0981 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:31:30.1184 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:31:30.1456 Info Configuration initialized.
+2024-06-26 01:33:16.5976 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:33:16.6345 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:33:16.6599 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:33:16.6854 Info Configuration initialized.
+2024-06-26 01:35:17.5777 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:35:17.6107 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:35:17.6377 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:35:17.6628 Info Configuration initialized.
+2024-06-26 01:36:21.8437 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:36:21.8765 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:36:21.8971 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:36:21.9255 Info Configuration initialized.
+2024-06-26 01:37:17.2473 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:37:17.2783 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:37:17.3001 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:37:17.3279 Info Configuration initialized.
+2024-06-26 01:38:22.4396 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:38:22.4817 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:38:22.5100 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:38:22.5378 Info Configuration initialized.
+2024-06-26 01:39:46.6237 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:39:46.6691 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:39:46.6956 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:39:46.7290 Info Configuration initialized.
+2024-06-26 01:41:05.1843 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:41:05.2394 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:41:05.2808 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:41:05.3280 Info Configuration initialized.
+2024-06-26 01:42:30.8361 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:42:30.8865 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:42:30.9129 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:42:30.9496 Info Configuration initialized.
+2024-06-26 01:44:03.3775 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:44:03.4293 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:44:03.4741 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:44:03.5256 Info Configuration initialized.
+2024-06-26 01:46:52.1639 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:46:52.2285 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:46:52.2725 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:46:52.3224 Info Configuration initialized.
+2024-06-26 01:50:32.3549 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:50:32.4158 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:50:32.4565 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:50:32.4886 Info Configuration initialized.
+2024-06-26 01:52:49.1685 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:52:49.2324 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:52:49.2747 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:52:49.3310 Info Configuration initialized.
+2024-06-26 01:53:25.2511 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:53:25.2843 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:53:25.3031 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:53:25.3255 Info Configuration initialized.
+2024-06-26 01:53:56.9657 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:53:57.0000 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:53:57.0218 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:53:57.0470 Info Configuration initialized.
+2024-06-26 01:58:05.4559 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 01:58:05.4999 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 01:58:05.5245 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 01:58:05.5536 Info Configuration initialized.
+2024-06-26 02:06:22.6726 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 02:06:22.7061 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 02:06:22.7229 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 02:06:22.7455 Info Configuration initialized.
+2024-06-26 02:09:09.1609 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 02:09:09.2002 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 02:09:09.2245 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 02:09:09.2540 Info Configuration initialized.
+2024-06-26 02:09:39.4002 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 02:09:39.4428 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 02:09:39.4734 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 02:09:40.6932 Info Configuration initialized.
+2024-06-26 02:14:05.6863 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 02:14:05.7188 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 02:14:05.7393 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 02:14:05.7670 Info Configuration initialized.
+2024-06-26 02:19:37.2253 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 02:19:37.2664 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 02:19:37.2900 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 02:19:37.3148 Info Configuration initialized.
+2024-06-26 02:21:45.3362 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 02:21:45.3769 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 02:21:45.3991 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 02:21:45.4254 Info Configuration initialized.
+2024-06-26 02:24:11.2150 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 02:24:11.2529 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 02:24:11.2768 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 02:24:11.3048 Info Configuration initialized.
+2024-06-26 02:27:07.4570 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 02:27:07.4912 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 02:27:07.6532 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 02:27:07.6907 Info Configuration initialized.
+2024-06-26 02:31:26.7529 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 02:31:26.7981 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 02:31:26.8305 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 02:31:26.8634 Info Configuration initialized.
+2024-06-26 02:33:25.1228 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 02:33:25.1555 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 02:33:25.1713 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 02:33:25.1913 Info Configuration initialized.
+2024-06-26 02:36:44.1575 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 02:36:44.1881 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 02:36:44.2041 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 02:36:44.2274 Info Configuration initialized.
+2024-06-26 02:55:15.1025 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 02:55:15.1739 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 02:55:15.2009 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 02:55:15.2436 Info Configuration initialized.
+2024-06-26 03:00:13.4651 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 03:00:13.5898 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 03:00:13.6348 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 03:00:13.6767 Info Configuration initialized.
+2024-06-26 03:00:56.5780 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 03:00:56.6112 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 03:00:56.6353 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 03:00:56.6612 Info Configuration initialized.
+2024-06-26 03:02:30.3967 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 03:02:30.4516 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 03:02:30.4851 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 03:02:30.5241 Info Configuration initialized.
+2024-06-26 03:03:55.9661 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 03:03:56.1017 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 03:03:56.1241 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 03:03:56.1546 Info Configuration initialized.
+2024-06-26 03:04:41.2447 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 03:04:41.2784 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 03:04:41.2987 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 03:04:41.3270 Info Configuration initialized.
+2024-06-26 03:06:06.0980 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 03:06:06.2022 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 03:06:06.2395 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 03:06:06.2753 Info Configuration initialized.
+2024-06-26 03:07:53.7483 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 03:07:53.7791 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 03:07:53.8034 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 03:07:53.8279 Info Configuration initialized.
+2024-06-26 03:11:15.9722 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 03:11:16.0289 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 03:11:16.0580 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 03:11:16.0924 Info Configuration initialized.
+2024-06-26 03:12:19.5221 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 03:12:19.5675 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 03:12:19.5963 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 03:12:19.6316 Info Configuration initialized.
+2024-06-26 09:58:11.2415 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 09:58:11.3380 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 09:58:11.4019 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 09:58:11.4750 Info Configuration initialized.
+2024-06-26 09:59:16.4069 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 09:59:16.4676 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 09:59:16.5025 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 09:59:16.5565 Info Configuration initialized.
+2024-06-26 10:00:12.7920 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 10:00:12.8537 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 10:00:12.9021 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 10:00:12.9557 Info Configuration initialized.
+2024-06-26 10:02:22.3073 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 10:02:22.3532 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 10:02:22.3822 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 10:02:22.4185 Info Configuration initialized.
+2024-06-26 10:08:15.1332 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 10:08:15.1941 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 10:08:15.2223 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 10:08:15.2513 Info Configuration initialized.
+2024-06-26 10:19:15.7629 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 10:19:15.8627 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 10:19:15.9330 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 10:19:16.0068 Info Configuration initialized.
+2024-06-26 10:22:11.0669 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 10:22:11.1592 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 10:22:11.2366 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 10:22:11.3202 Info Configuration initialized.
+2024-06-26 10:26:09.0168 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 10:26:09.0829 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 10:26:09.1331 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 10:26:09.1780 Info Configuration initialized.
+2024-06-26 12:21:12.0982 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 12:21:12.2460 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 12:21:12.3016 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 12:21:12.3751 Info Configuration initialized.
+2024-06-26 12:22:31.7951 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 12:22:31.8487 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 12:22:31.8873 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 12:22:31.9266 Info Configuration initialized.
+2024-06-26 12:26:58.4047 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 12:26:58.4494 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 12:26:58.4756 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 12:26:58.5104 Info Configuration initialized.
+2024-06-26 12:28:40.5261 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 12:28:40.5783 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 12:28:40.6120 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 12:28:40.6552 Info Configuration initialized.
+2024-06-26 12:30:13.5538 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 12:30:13.6274 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 12:30:13.6852 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 12:30:13.7456 Info Configuration initialized.
+2024-06-26 12:33:07.3941 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 12:33:07.4539 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 12:33:07.4920 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 12:33:07.5405 Info Configuration initialized.
+2024-06-26 12:42:52.1605 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 12:42:52.2075 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 12:42:52.2440 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 12:42:52.2867 Info Configuration initialized.
+2024-06-26 12:44:34.1363 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 12:44:34.2081 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 12:44:34.2564 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 12:44:34.3059 Info Configuration initialized.
+2024-06-26 12:52:35.4461 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 12:52:35.5311 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 12:52:35.5944 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 12:52:35.6679 Info Configuration initialized.
+2024-06-26 15:56:14.8207 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-06-26 15:56:14.9256 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-26 15:56:14.9641 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\AhmetCan\source\repos\Backend\Backend\nLog.config
+2024-06-26 15:56:14.9983 Info Configuration initialized.

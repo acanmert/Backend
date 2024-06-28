@@ -1,24 +1,98 @@
 ﻿@model Suggestions.Entities.Models.User;
 
-<h1>Email Verification</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+    <style>
+        .centered-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-<form asp-action="EmailVerification" method="post" >
-    <div>
-        <label>E-mailinize gelen şifreyi giriniz</label>
-    </div>
-    <div>
-        <input name="code" class="form-control" />
-    </div>
-    <div>
-        <input  class="form-control btn btn-primary" type="submit" value="Gönder" />
-    </div>
-    <span asp-validation-for="ConfirmationCode" class="text-danger"></span>
+        .form-container {
+            width: 420px;
+            background: #333;
+            color: #fff;
+            border-radius: 20px;
+            padding: 30px 40px;
+            margin: 15px;
+        }
 
-    <!-- Hidden fields to pass the User object -->
-    <input type="hidden" asp-for="Name" />
-    <input type="hidden" asp-for="SurName" />
-    <input type="hidden" asp-for="Email" />
-    <input type="hidden" asp-for="Password" />
-    <input type="hidden" asp-for="PasswordConfirmed" />
-    <input type="hidden" asp-for="ConfirmationCode" />
-</form>
+        h1 {
+            text-align: center;
+        }
+
+        .form-control {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.12), inset 0 1px 2px rgba(0,0,0,0.24);
+        }
+
+        .btn-primary {
+            width: 50%;
+            margin: 0 auto;
+            display: block;
+            height: 45px;
+            background: #fff;
+            border: none;
+            outline: none;
+            border-radius: 40px;
+            box-shadow: 0 0 10px rgba(0,0,0, .1);
+            cursor: pointer;
+            font-size: 16px;
+            color: #333;
+            font-weight: 600;
+            padding-left: 30px !important;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .text-danger {
+            color: #ff6b6b;
+            display: block;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="centered-form">
+        <div class="form-container cmp1">
+            <h1 id="dosyaYukle">Email Verification</h1>
+            <form asp-action="EmailVerification" method="post">
+                <div>
+                    <label id="dosyaSec">E-mailinize gelen şifreyi giriniz</label>
+                </div>
+                <div>
+                    <input name="code" class="form-control" />
+                </div>
+                <div>
+                    <input id="btn" class="form-control btn btn-primary" type="submit" value="Gönder" />
+                </div>
+                <span asp-validation-for="ConfirmationCode" class="text-danger"></span>
+
+                <!-- Hidden fields to pass the User object -->
+                <input type="hidden" asp-for="Name" />
+                <input type="hidden" asp-for="SurName" />
+                <input type="hidden" asp-for="Email" />
+                <input type="hidden" asp-for="Password" />
+                <input type="hidden" asp-for="PasswordConfirmed" />
+                <input type="hidden" asp-for="ConfirmationCode" />
+            </form>
+        </div>
+    </div>
+</body>
+</html>

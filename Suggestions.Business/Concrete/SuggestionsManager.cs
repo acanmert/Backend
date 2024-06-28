@@ -14,9 +14,14 @@ namespace Suggestions.Business.Concrete
     {
         private static readonly HttpClient _client = new HttpClient();
 
-        public List<string> GetFile()
+        public List<string> GetFile(string email)
         {
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\dataset");
+         
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), $"wwwroot\\dataset\\{email}");
+            if (!Directory.Exists(filePath))
+            {
+                Directory.CreateDirectory(filePath);
+            }
             var dataSet = Directory.GetFiles(filePath);
 
             List<string> dataFileNames = new List<string>();
@@ -38,13 +43,13 @@ namespace Suggestions.Business.Concrete
 
         }
 
-        public List<string> DataUpload(IFormFile formFile)
+        public List<string> DataUpload(IFormFile formFile, string Email)
         {
             //...ekleme işlemleri   
             if (formFile != null && formFile.FileName.EndsWith(".csv"))
             {
 
-                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\dataset", formFile.FileName);
+                var path = Path.Combine(Directory.GetCurrentDirectory(), $"wwwroot\\dataset\\{Email}", formFile.FileName);
 
                 using (var stream = new FileStream(path, FileMode.Create))
                 {
@@ -52,11 +57,11 @@ namespace Suggestions.Business.Concrete
                 }
 
             }
-            var files = GetFile();
+            var files = GetFile(Email);
             return files;
 
         }
-        public async Task<List<string>> GetRecommendations(string fileName, List<string> benzerlikName, string p_primaryKey, string getProductName, string p_type,int requestCount)
+        public async Task<List<string>> GetRecommendations(string fileName, List<string> benzerlikName, string p_primaryKey, string getProductName, string p_type,int requestCount, string Email)
         {
             string benzerlik = string.Join(",", benzerlikName);
             string secim = fileName;
@@ -67,7 +72,7 @@ namespace Suggestions.Business.Concrete
 
 
             // Flask API'sine GET isteği gönder
-            string apiUrl = $"http://127.0.0.1:5000/recommendations?secim={secim}&selected_features={string.Join(",", selectedFeatures)}&p_name={p_name}&p_pk={p_pk}&p_type={pType}&requrst_count={requestCount}";
+            string apiUrl = $"http://127.0.0.1:5000/recommendations?secim={secim}&selected_features={string.Join(",", selectedFeatures)}&p_name={p_name}&p_pk={p_pk}&p_type={pType}&requrst_count={requestCount}&email={Email}";
             HttpResponseMessage response = await _client.GetAsync(apiUrl);
 
             if (response.IsSuccessStatusCode)
@@ -97,9 +102,9 @@ namespace Suggestions.Business.Concrete
             }
 
         }
-        public List<string> Header(string fileName)
+        public List<string> Header(string fileName,string email)
         {
-            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\dataset", fileName);
+            var path = Path.Combine(Directory.GetCurrentDirectory(), $"wwwroot\\dataset\\{email}", fileName);
             using (var reader = new StreamReader(path))
             {
                 // İlk satırı oku
@@ -108,12 +113,13 @@ namespace Suggestions.Business.Concrete
                 return liste;
             }
         }
-        public FileUploadViewModel Suggestions(string fileName)
+        public FileUploadViewModel Suggestions(string fileName,string email)
         {
+
             FileUploadViewModel file = new FileUploadViewModel();
 
-            file.FieldList = Header(fileName);
-            file.FileNames = GetFile();
+            file.FieldList = Header(fileName,email);
+            file.FileNames = GetFile(email);
             file.ThisFileName = fileName;
             return file;
         }

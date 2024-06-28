@@ -1,4 +1,9 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿function mouseoverbtn() {
+    document.getElementById("btn1").style.backgroundColor = "#666";
+    document.getElementById("btn1").style.color = "#fff";
+}
+function mouseoutbtn() {
+    document.getElementById("btn1").style.backgroundColor = "#fff";
+    document.getElementById("btn1").style.color = "#333";
 
-// Write your JavaScript code.
+}
